@@ -37,16 +37,16 @@ jobs:
         
       - name: Prépare un .jar comme si il partait en prod
         run: mvnw -ntp verify -DskipTests --batch-mode "-Pprod" "-Pe2e" "-Denforcer.skip=true"*
-	
+
       - name: Créer une BDD et lance le .jar dans un docker
         run: npm run ci:e2e:prepare:docker
-	
+
       - name: Lance les tests
         run: npm run ci:e2e:run
-	
+
       - name: Met fin au docker et nettoye le tout
         run: npm run ci:e2e:teardown
-        
+
       - name: autorisation des tests
         run: chmod +x mvnw
         
