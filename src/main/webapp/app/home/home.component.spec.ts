@@ -57,7 +57,7 @@ describe('Component Tests', () => {
       comp.login();
 
       // THEN
-      expect(mockRouter.navigate).toHaveBeenCalledWith(['/login']);
+      expect(mockRouter.navigate).toHaveBeenCalledWith(['/register']);
     });
   });
 });
