@@ -19,6 +19,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env:
+      JHI_E2E_HEADLESS: true
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -40,9 +42,6 @@ jobs:
 
       - name: Créer une BDD et lance le .jar dans un docker
         run: npm run ci:e2e:prepare:docker
-     
-      - name: Headless true
-        run: export JHI_E2E_HEADLESS=true 
 
       - name: Lance les tests
         run: npm run ci:e2e:run
