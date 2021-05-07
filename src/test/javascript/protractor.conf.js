@@ -39,7 +39,7 @@ exports.config = {
   },
 
   onPrepare: function () {
-    browser.driver.manage().window().setSize(1280, 1024);
+    //browser.driver.manage().window().setSize(1280, 1024);
     // Disable animations
     // @ts-ignore
     browser.executeScript('document.body.className += " notransition";');
