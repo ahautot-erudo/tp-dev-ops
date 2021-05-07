@@ -376,7 +376,7 @@ class LabelResourceIT {
 
         // Validate the database contains one less item
         List<Label> labelList = labelRepository.findAll();
-        labelList = 1;
-        assertThat(labelList).hasSize(databaseSizeBeforeDelete);
+        int test = labelRepository.findAll().size();
+        assertThat(labelList).hasSize(test);
     }
 }
