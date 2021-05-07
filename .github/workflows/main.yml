@@ -35,6 +35,9 @@ jobs:
       - name: install node.js packages
         run: npm install
         
+      - name: autorisation des tests + tests backend
+        run: chmod +x mvnw && npm run ci:backend:test 
+        
       - name: starts frontend tests
         run: npm run ci:frontend:test
 
