@@ -40,6 +40,9 @@ jobs:
 
       - name: Créer une BDD et lance le .jar dans un docker
         run: npm run ci:e2e:prepare:docker
+     
+      - name: Headless true
+        run: export JHI_E2E_HEADLESS=true 
 
       - name: Lance les tests
         run: npm run ci:e2e:run
