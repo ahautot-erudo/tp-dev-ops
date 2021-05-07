@@ -36,7 +36,7 @@ jobs:
         run: npm install
         
       - name: Prépare un .jar comme si il partait en prod
-        run: mvnw -ntp verify -DskipTests --batch-mode "-Pprod" "-Pe2e" "-Denforcer.skip=true"*
+        run: mvnw.cmd -ntp verify -DskipTests --batch-mode "-Pprod" "-Pe2e" "-Denforcer.skip=true"*
 
       - name: Créer une BDD et lance le .jar dans un docker
         run: npm run ci:e2e:prepare:docker
